@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """rawRssiScanner.py: Scans the WiFi environment for RSSI values from WiFi beacon packets."""
 
