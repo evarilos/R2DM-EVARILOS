@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""getDatabases.py: Get a list of databases in the R2DM service."""
+
+__author__ = "Filip Lemic"
+__copyright__ = "Copyright 2015, EVARILOS Project"
+
+__version__ = "1.0.0"
+__maintainer__ = "Filip Lemic"
+__email__ = "lemic@tkn.tu-berlin.de"
+__status__ = "Development"
+
 import sys
 import urllib2
 import json

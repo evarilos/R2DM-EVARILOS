@@ -11,10 +11,10 @@ __maintainer__ = "Filip Lemic"
 __email__ = "lemic@tkn.tu-berlin.de"
 __status__ = "Development"
 
+from generateURL import RequestWithMethod
 import sys
 import urllib2
 import json
-from generateURL import RequestWithMethod
 
 # This is an example of deleting a database
 
