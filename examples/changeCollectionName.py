@@ -20,13 +20,13 @@ from generateURL import RequestWithMethod
 apiURL = 'http://localhost:5000/'
 
 # The ID of the database
-db_id = 'testDatabase'
+db_id = 'test_db'
 
 # The old ID of the collection in the database
-coll_id = 'testCollection'
+coll_id = 'test_coll_01'
 
 # The new ID of the collection in the database
-new_name = 'testCollection_new'
+new_name = 'test_coll_02'
 
 req = RequestWithMethod(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id + '/collection/' + coll_id, 'PATCH', headers={"Content-Type": "application/json"}, data = new_name)
 resp = urllib2.urlopen(req)
