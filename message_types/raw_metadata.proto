@@ -1,0 +1,20 @@
+package evarilos;
+
+message Metadata {
+	required string data_id = 1;					  // ID of the data
+	required string metadata_id = 2;                  // ID of the metadata
+	required int64 timestamp_utc = 3;                 // Milliseconds from 1.1.1970
+	required string testbed_id = 4; 				  // ID of the testbed
+  	required Scenario_description scenario = 5;       // Description of the scenario
+  	required string licence = 6;                      // ODC Open Database License (ODbL)
+  	optional bytes _id = 7;                           // Internal ID given by the MongoDB
+
+	message Scenario_description {
+		required string receiver_description = 1;     // Receiver description
+		required string sender_description = 2;       // Sender description
+		required string environment_description = 3;  // Environment description
+		required string experiment_description = 4;   // Experiment description
+		required string type_of_raw_data = 5;         // Type of raw data
+		optional string interference_description = 6; // Interference description
+	}
+}

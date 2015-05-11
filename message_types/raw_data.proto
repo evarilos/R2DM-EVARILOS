@@ -1,0 +1,36 @@
+package evarilos;
+
+message RawRFReading {
+  optional string sender_id = 1;                 // ID of the sender
+  optional string sender_bssid = 2;              // BSSID of the sender
+  optional string receiver_id = 3;		           // ID of the receiver
+	optional string receiver_bssid = 4;		         // BSSID of the receiver
+  optional string channel = 5;                   // Channel
+  optional int32 rssi = 6;                       // RSSI (Received Signal Strength)
+  optional float lqi = 7;                        // LQI (Link Quality Indication)
+  optional float ToA = 8;                        // ToA (Time of Arrival)
+  optional float AoA = 9;                        // AoA (Angle of Arrival)
+  optional int64 timestamp_utc = 10;    	       // Milliseconds from 1.1.1970. time
+  optional int32 run_nr = 11;                    // Run number
+  optional bool is_ack = 12 [default = false];   // Is message an ACK?
+	optional Location sender_location = 13;        // Location of the sender
+	optional Location receiver_location = 14;      // Location of the receiver
+	
+	message Location {
+    optional double coordinate_x = 1;            // x-coordinate
+    optional double coordinate_y = 2;            // y-coordinate
+    optional double coordinate_z = 3;            // z-coordinate
+    optional string room_label = 4;              // Room label
+    optional string node_label = 5;              // Additional label
+  }
+} 
+
+message RawRFReadingCollection {
+  required string metadata_id = 1;               // Connection to the metadata
+  repeated RawRFReading raw_measurement = 2;     // Collections of raw RSSI data
+  required int32 meas_number = 3;                // Number of measurments
+  required string data_id = 4;                   // ID of the data
+  optional bytes _id = 5;                        // Internal ID given by the MongoDB 
+  optional int64 timestamp_utc_start = 6;        // Milliseconds from 1.1.1970. start time
+	optional int64 timestamp_utc_stop = 7;         // Milliseconds from 1.1.1970. stop time
+}
