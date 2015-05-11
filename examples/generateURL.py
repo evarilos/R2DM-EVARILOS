@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""generateURL.py: Enables DELETE, PUT, POST, PATCH in RESTful."""
+
 import urllib2
 
 # Enabling DELETE, PUT, etc.
