@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""wifiFingerprint.py: Generate a fingerprint of the WiFi environment (Linux, Mac OS)."""
+
+__author__ = "Filip Lemic"
+__copyright__ = "Copyright 2015, EVARILOS Project"
+
+__version__ = "1.0.0"
+__maintainer__ = "Filip Lemic"
+__email__ = "lemic@tkn.tu-berlin.de"
+__status__ = "Development"
+
 from subprocess import Popen, PIPE
 import sys
 import re
