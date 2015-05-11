@@ -16,8 +16,6 @@ import sys
 import urllib2
 import json
 
-# This is an example of deleting a database
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

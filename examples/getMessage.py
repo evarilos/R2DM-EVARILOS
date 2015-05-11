@@ -17,8 +17,6 @@ import json
 import raw_data_pb2
 from generateURL import RequestWithMethod
 
-# This is an example of getting a message
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

@@ -20,8 +20,6 @@ import urllib
 import urllib2
 import raw_data_pb2
 
-# This is an example of scanning the environment for RSSI values and storing them as a message in the raw data database
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

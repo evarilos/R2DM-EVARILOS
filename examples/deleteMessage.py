@@ -16,8 +16,6 @@ import urllib2
 import json
 from generateURL import RequestWithMethod
 
-# This is an example of deleting a message
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

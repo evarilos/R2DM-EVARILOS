@@ -15,8 +15,6 @@ import sys
 import urllib2
 import json
 
-# This is an example of creating a new empty database for raw data.
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

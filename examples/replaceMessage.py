@@ -20,8 +20,6 @@ import time
 import json
 from generateURL import RequestWithMethod
 
-# This is an example of replacing the message using PUT
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

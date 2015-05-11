@@ -15,8 +15,6 @@ import sys
 import urllib2
 import json
 
-# This is an example of getting messages from the collection
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 

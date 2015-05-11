@@ -15,8 +15,6 @@ import sys
 import urllib2
 import json
 
-# This is an example of geting the list of collections in the database
-
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 
