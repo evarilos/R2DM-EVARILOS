@@ -1,9 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """changeCollectionName.py: Change the name of a collection in the R2DM service."""
 
 __author__ = "Filip Lemic"
-__copyright__ = "Copyright 2014, EVARILOS Project"
+__copyright__ = "Copyright 2015, EVARILOS Project"
 
 __version__ = "1.0.0"
 __maintainer__ = "Filip Lemic"
