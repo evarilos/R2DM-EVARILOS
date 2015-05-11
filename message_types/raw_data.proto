@@ -22,13 +22,13 @@ message RawRFReading {
   optional float lqi = 7;                        // LQI (Link Quality Indication)
   optional float ToA = 8;                        // ToA (Time of Arrival)
   optional float AoA = 9;                        // AoA (Angle of Arrival)
-  optional int64 timestamp_utc = 10;    	       // Milliseconds from 1.1.1970. time
+  optional int64 timestamp_utc = 10;             // Milliseconds from 1.1.1970. time
   optional int32 run_nr = 11;                    // Run number
   optional bool is_ack = 12 [default = false];   // Is message an ACK?
   optional Location sender_location = 13;        // Location of the sender
   optional Location receiver_location = 14;      // Location of the receiver
 	
-	message Location {
+  message Location {
     optional double coordinate_x = 1;            // x-coordinate
     optional double coordinate_y = 2;            // y-coordinate
     optional double coordinate_z = 3;            // z-coordinate
