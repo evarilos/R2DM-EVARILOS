@@ -15,8 +15,8 @@ package evarilos;
 message RawRFReading {
   optional string sender_id = 1;                 // ID of the sender
   optional string sender_bssid = 2;              // BSSID of the sender
-  optional string receiver_id = 3;		           // ID of the receiver
-	optional string receiver_bssid = 4;		         // BSSID of the receiver
+  optional string receiver_id = 3;               // ID of the receiver
+  optional string receiver_bssid = 4;            // BSSID of the receiver
   optional string channel = 5;                   // Channel
   optional int32 rssi = 6;                       // RSSI (Received Signal Strength)
   optional float lqi = 7;                        // LQI (Link Quality Indication)
