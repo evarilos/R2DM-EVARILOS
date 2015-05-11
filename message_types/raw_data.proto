@@ -1,3 +1,15 @@
+////////////////////////////////////////////////////////////////////////////////////
+// raw_data.proto: Message used for storing the raw data in the R2DM service.
+//
+// __author__ = "Filip Lemic"
+// __copyright__ = "Copyright 2014, EVARILOS Project"
+//
+// __version__ = "1.0.0"
+// __maintainer__ = "Filip Lemic"
+// __email__ = "lemic@tkn.tu-berlin.de"
+// __status__ = "Development"
+////////////////////////////////////////////////////////////////////////////////////
+
 package evarilos;
 
 message RawRFReading {
