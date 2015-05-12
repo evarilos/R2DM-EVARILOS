@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""change_axes.py: Switch the X and Y coordinate in each message."""
+"""change_coordinate.py: Change the coordinate (X,Y or Z) in each message."""
 
 __author__ = "Filip Lemic"
 __copyright__ = "Copyright 2015, EVARILOS Project"
@@ -21,10 +21,10 @@ from protobuf_json import json2pb
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
 
-# The ID of the database
+# The name of a database
 db_id = 'test_db'
 
-# The ID of the collection in the database
+# The name of a collection in the database
 coll_id = 'test_coll'
 
 req = urllib2.Request(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id  + '/collection/' + coll_id + '/message', headers={"Content-Type": "application/json"})
@@ -44,11 +44,10 @@ for i in messages.keys():
 	
 	for i in message['raw_measurement']:
 		
-		coor_x = i['receiver_location']['coordinate_x']
-		coor_y = i['receiver_location']['coordinate_y']
-		i['receiver_location']['coordinate_x'] = coor_y
-		i['receiver_location']['coordinate_y'] = coor_x
-		raw_data_collection.ClearField("_id")
+		# if coord_z == something -> change it
+		if i['receiver_location']['coordinate_z'] == 9.08: 
+			i['receiver_location']['coordinate_z'] = 9.53
+			raw_data_collection.ClearField("_id")
 
 	json2pb(raw_data_collection, message)
 	obj = raw_data_collection.SerializeToString()
