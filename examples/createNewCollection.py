@@ -19,10 +19,10 @@ import json
 apiURL = 'http://localhost:5000/'
 
 # The ID of the database
-db_id = 'test_db'
+db_id = 'db_id'
 
 # The ID of the collection in the database
-coll_id = 'test_coll'
+coll_id = 'coll_id'
 
 req = urllib2.Request(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id  + '/collection', headers={"Content-Type": "application/json"}, data = coll_id)
 resp = urllib2.urlopen(req)
