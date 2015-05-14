@@ -40,14 +40,12 @@ for i in messages.keys():
 
 	req = RequestWithMethod(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id + '/collection/' + coll_id + '/message/' + data_id, 'DELETE', headers={"Content-Type": "application/json"})
 	resp = urllib2.urlopen(req)
-	response = json.loads(resp.read())
 	
 	for i in message['raw_measurement']:
 		
 		# if coord_z == something -> change it
 		if i['receiver_location']['coordinate_z'] == 9.08: 
 			i['receiver_location']['coordinate_z'] = 9.53
-			raw_data_collection.ClearField("_id")
 
 	json2pb(raw_data_collection, message)
 	obj = raw_data_collection.SerializeToString()
