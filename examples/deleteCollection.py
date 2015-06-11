@@ -17,13 +17,13 @@ import json
 from generateURL import RequestWithMethod
 
 # The URL where server listens
-apiURL = 'http://ebp.evarilos.eu:5000/'
+apiURL = 'http://localhost:5000/'
 
 # The ID of the database
-db_id = 'fine_granularity_twist'
+db_id = 'test_db'
 
 # The ID of the collection in the database
-coll_id = 'macbook_training'
+coll_id = 'test_coll'
 
 req = RequestWithMethod(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id + '/collection/' + coll_id, 'DELETE', headers={"Content-Type": "application/json"})
 resp = urllib2.urlopen(req)

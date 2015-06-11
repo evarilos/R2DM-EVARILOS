@@ -24,9 +24,6 @@ db_id = 'test_db'
 # The ID of the collection in the database
 coll_id = 'test_coll'
 
-# The ID of the data
-data_id = 'test_data'
-
 req = urllib2.Request(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id  + '/collection/' + coll_id + '/message', headers={"Content-Type": "application/json"})
 resp = urllib2.urlopen(req)
 messages = json.loads(resp.read())
