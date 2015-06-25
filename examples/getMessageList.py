@@ -14,6 +14,7 @@ __status__ = "Development"
 import sys
 import urllib2
 import json
+import raw_data_pb2
 
 # The URL where server listens
 apiURL = 'http://localhost:5000/'
@@ -28,6 +29,4 @@ req = urllib2.Request(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id  + '/c
 resp = urllib2.urlopen(req)
 messages = json.loads(resp.read())
 
-print "Location label:"
-for i in messages.keys():
-	print messages[i]['data_id']
+print messages

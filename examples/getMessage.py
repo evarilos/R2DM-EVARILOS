@@ -38,8 +38,7 @@ raw_data_collection.ParseFromString(message)
 print raw_data_collection
 
 ## Getting message as a json object
-raw_data_collection = raw_data_pb2.RawRFReadingCollection() 
 req = RequestWithMethod(apiURL + 'evarilos/raw_data/v1.0/database/' + db_id  + '/collection/' + coll_id + '/message/' + data_id, 'GET', headers={"Content-Type": "application/json"}, data = 'json')
 response = urllib2.urlopen(req)
 message = response.read()
-print raw_data_collection
+print message
